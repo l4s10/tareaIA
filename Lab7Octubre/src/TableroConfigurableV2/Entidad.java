@@ -20,7 +20,7 @@ public class Entidad extends TimerTask implements tableroConstantes{
         //Revisando Limites
         if(yMov > 0){
             //Si la celda es tipo linea
-            if(mv.Escenario.celdas[xMov][yMov-1].tipo == LINEA && (xMov!=xAnt && yMov-1!=yAnt)){
+            if((mv.Escenario.celdas[xMov][yMov-1].tipo == LINEA || mv.Escenario.celdas[xMov][yMov-1].tipo == META )&& (xMov!=xAnt && yMov-1!=yAnt)){
                 xAnt = xMov;
                 yAnt = yMov;
                 yMov -= 1;
@@ -33,7 +33,7 @@ public class Entidad extends TimerTask implements tableroConstantes{
     public void moverAbajo(){
         if(yMov < LARGO_CELDAS-1){
             if(yMov < LARGO_CELDAS-1){
-                if(mv.Escenario.celdas[xMov][yMov+1].tipo == LINEA && (yMov+1!=yAnt)){
+                if((mv.Escenario.celdas[xMov][yMov+1].tipo == LINEA || mv.Escenario.celdas[xMov][yMov+1].tipo == META) && (yMov+1!=yAnt)){
                     xAnt = xMov;
                     yAnt = yMov;
                     yMov += 1;
@@ -46,7 +46,7 @@ public class Entidad extends TimerTask implements tableroConstantes{
     }
     public void moverIzquierda() {
         if ( xMov!=0) {
-            if ( mv.Escenario.celdas[xMov-1][yMov].tipo == LINEA && (xMov-1!=xAnt)) {
+            if ( (mv.Escenario.celdas[xMov-1][yMov].tipo == LINEA || mv.Escenario.celdas[xMov-1][yMov].tipo == META) && (xMov-1!=xAnt)) {
                 xAnt = xMov;
                 yAnt = yMov;
                 xMov-=1;
@@ -58,7 +58,7 @@ public class Entidad extends TimerTask implements tableroConstantes{
     }
     public void moverDerecha(){
         if ( xMov < ANCHO_CELDAS-1 ) {
-            if (mv.Escenario.celdas[xMov + 1][yMov].tipo == LINEA && (xMov+1!=xAnt)){
+            if ((mv.Escenario.celdas[xMov + 1][yMov].tipo == LINEA || mv.Escenario.celdas[xMov + 1][yMov].tipo == META) && (xMov+1!=xAnt)){
                 xAnt = xMov;
                 yAnt = yMov;
                 xMov += 1;
@@ -100,7 +100,7 @@ public class Entidad extends TimerTask implements tableroConstantes{
 
     }
     public boolean fin(){
-        if(mv.Jugador.xMov == 3 && mv.Jugador.yMov == 3){
+        if(mv.Escenario.celdas[xMov][yMov].tipo == META){
             System.out.println("---HE LLEGADO AL FINAL ---");
             return true;
         }else{

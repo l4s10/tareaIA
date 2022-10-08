@@ -24,22 +24,22 @@ public class Celda implements tableroConstantes{
         switch(tipo) {
             case CAMINO:
                 g.drawRect(xPixel,yPixel,PIXEL,PIXEL);
-                break;
+            break;
             case OBSTACULO:
                 g.fillRect(xPixel,yPixel,PIXEL,PIXEL);
-                break;
-            case AMOR:
-                g.setColor(Color.PINK);
-                g.fillRect(xPixel,yPixel,PIXEL,PIXEL);
-                g.setColor(Color.black);
-                g.drawRect(xPixel,yPixel,PIXEL,PIXEL);
-                break;
+            break;
             case LINEA:
                 g.setColor(Color.black);
                 g.fillRect(xPixel,yPixel,PIXEL,PIXEL);
                 g.setColor(Color.black);
                 g.drawRect(xPixel,yPixel,PIXEL,PIXEL);
-                break;
+            break;
+            case META:
+                g.setColor(Color.red);
+                g.fillRect(xPixel,yPixel,PIXEL,PIXEL);
+                g.setColor(Color.black);
+                g.drawRect(xPixel,yPixel,PIXEL,PIXEL);
+            break;
         }
     }
 }

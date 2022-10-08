@@ -22,6 +22,6 @@ public interface tableroConstantes {
     //para la interaccion (pintar celdas correspondientes)
     public final char OBSTACULO='O';
     public final char CAMINO='C';
-    public final char AMOR='A';
+    public final char META = 'M';
     public final char LINEA = 'L';
 }

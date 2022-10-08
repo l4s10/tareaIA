@@ -35,6 +35,7 @@ public class MundoVirtual extends Canvas implements tableroConstantes{
         Jugador.paintCelda(g);
     }
 
+    //Definimos el camino y la meta
     public void SetScenario(){
         Escenario.celdas[0][0].tipo = LINEA;
         Escenario.celdas[1][0].tipo = LINEA;
@@ -42,7 +43,8 @@ public class MundoVirtual extends Canvas implements tableroConstantes{
         Escenario.celdas[1][2].tipo = LINEA;
         Escenario.celdas[2][2].tipo = LINEA;
         Escenario.celdas[2][3].tipo = LINEA;
-        Escenario.celdas[3][3].tipo = LINEA;
+
+        Escenario.celdas[3][3].tipo = META;
 
 
 
