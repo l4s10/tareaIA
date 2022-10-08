@@ -6,7 +6,7 @@ package TableroConfigurableV2;
 public interface tableroConstantes {
     //Configuraciones del tablero...
     //Tamaño de las celdas, ancho y largo. (CAMBIAR AQUI CUANTAS CELDAS HAY)
-    public final int PIXEL = 64;
+    public final int PIXEL = 100;
     public final int ANCHO_CELDAS = 4;
     public final int LARGO_CELDAS = 4;
 
