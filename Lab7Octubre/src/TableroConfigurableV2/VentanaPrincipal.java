@@ -17,8 +17,6 @@ import java.util.Timer;
             lanzador_tareas = new Timer();
             lanzador_tareas.scheduleAtFixedRate(mv.Jugador,0,5000);
             this.getContentPane().add(mv);
-
-
             //Configuraciones escenciales
             this.setSize(ANCHO_ESCENARIO,LARGO_ESCENARIO);
             this.setVisible(true);

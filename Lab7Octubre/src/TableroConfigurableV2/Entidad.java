@@ -97,12 +97,12 @@ public class Entidad extends TimerTask implements tableroConstantes{
             mv.repaint();
             sleeap();
         }
-
     }
     public boolean fin(){
         if(mv.Escenario.celdas[xMov][yMov].tipo == META){
             System.out.println("---HE LLEGADO AL FINAL ---");
-            return true;
+
+            return cancel();
         }else{
             return false;
         }
